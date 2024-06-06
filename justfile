@@ -1,17 +1,16 @@
-build_clang_dir := "build_clang"
-build_gcc_dir := "build"
+alias c := config
+alias b := build
+alias r := run
 
 config:
-    CC=clang meson setup {{ build_clang_dir }} .
-    CC=gcc meson setup {{ build_gcc_dir }} .
-    ln -sf {{ build_clang_dir }}/compile_commands.json ./compile_commands.json
+    CC=gcc meson setup build .
+    ln -sf build/compile_commands.json ./compile_commands.json
 
 build:
-    ninja -C {{ build_gcc_dir }}
+    ninja -C build
 
 run ex:
-    {{ build_gcc_dir }}/{{ ex }}
+    build/{{ ex }}
 
 clean:
-    rm -fr {{ build_clang_dir }}
-    rm -fr {{ build_gcc_dir }}
+    rm -fr build

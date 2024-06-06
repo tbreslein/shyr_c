@@ -24,22 +24,12 @@
           bintools = llvmPkgs.bintools;
         });
         clangTools = pkgs."clang-tools_${llvmVersion}";
+
+        buildInputs = [pkgs.ninja pkgs.meson pkgs.cmake pkgs.pkg-config gccPkg llvmPkgs.clang clangTools];
+        devTools = with pkgs; [ccls just nil statix alejandra];
       in {
         devShells.default = pkgs.mkShell.override {stdenv = clangStdEnv;} {
-          nativeBuildInputs = with pkgs;
-            [
-              ninja
-              cppcheck
-              ccls
-              meson
-              pkg-config
-              just
-
-              nil
-              statix
-              alejandra
-            ]
-            ++ [gccPkg llvmPkgs.clang clangTools];
+          buildInputs = buildInputs ++ devTools;
           shellHook = ''
             PATH="${clangTools}/bin:$PATH"
           '';

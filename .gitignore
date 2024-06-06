@@ -53,3 +53,4 @@ dkms.conf
 .direnv
 .cache/clangd/index
 compile_commands.json
+subprojects/*/
