@@ -1,1 +1,1 @@
-executable('minimal', 'minimal.c', link_with: shyr)
+executable('minimal', 'minimal.c', dependencies: [shyr_dep])

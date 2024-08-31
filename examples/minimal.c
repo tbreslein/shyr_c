@@ -1,3 +1,3 @@
-#include <shyr/shyr.h>
+#include <shyr.h>
 
 int main(void) { return shyr_run(); }
