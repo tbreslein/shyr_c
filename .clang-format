@@ -1,7 +1,9 @@
 ---
 BasedOnStyle: LLVM
+AlignAfterOpenBracket: AlwaysBreak
 AlignArrayOfStructures: Right
 AlwaysBreakTemplateDeclarations: Yes
+BreakBeforeBraces: Linux
 BreakConstructorInitializers: BeforeComma
 IndentCaseLabels: true
 IndentWidth: 4

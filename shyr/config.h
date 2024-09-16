@@ -12,6 +12,11 @@
 #define N_ALL (N_GC * 2 + N_COMP)
 #endif
 
+#define IMIN 0
+#define IMAX (N_ALL - 1)
+#define IXI_IN N_GC
+#define IXI_OUT (N_ALL - N_GC)
+
 #define PHYSICS_EULERISO 1
 #define PHYSICS_EULER 2
 
@@ -40,8 +45,11 @@
 #define EAST 2
 #define N_DIRS 3
 
+typedef enum { InitNoh } InitialConditions;
+
 typedef struct Config {
     double xi_in;
     double xi_out;
     double adiabatic_index;
+    InitialConditions init_conditions;
 } Config;

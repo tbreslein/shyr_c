@@ -1,4 +1,4 @@
-all: build/all
+all: build/examples/all
 
 build/examples/%: shyr/**/*
 	meson setup build . -Dexamples=$*
