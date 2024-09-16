@@ -2,6 +2,7 @@
 
 #include "config/config.h"
 #include "mesh/mesh.h"
+#include "state/state.h"
 #include <stdio.h>
 
 int shyr_run(void) {
