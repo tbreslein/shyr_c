@@ -6,6 +6,7 @@ typedef struct {
     double xi_cent[N_ALL];
     double xi_west[N_ALL];
     double xi_east[N_ALL];
+    double d_area_xi_deta_dphi_east[N_ALL];
 } Mesh;
 
 Mesh init_mesh(const Config *const config)

@@ -46,10 +46,13 @@
 #define N_DIRS 3
 
 typedef enum { InitNoh } InitialConditions;
+typedef enum { BoundaryNoGradients } BoundaryCond;
 
 typedef struct Config {
     double xi_in;
     double xi_out;
     double adiabatic_index;
     InitialConditions init_conditions;
+    BoundaryCond boundary_west;
+    BoundaryCond boundary_east;
 } Config;

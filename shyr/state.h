@@ -84,3 +84,17 @@ void update_c_sound(
         cs[i] = sqrt(gamma * p[J_P][i] / p[J_DENS][i]);
 #endif
 }
+
+/*void update_eigen_vals(*/
+/*    double eigen_vals[restrict J_MAX][N_ALL], const double cs[restrict
+ * N_ALL],*/
+/*    const double p[restrict J_MAX][N_ALL])*/
+/*{*/
+/*    for (int i = 0; i < N_ALL; i++) {*/
+/*        eigen_vals[0][i] = p[J_XI][i] - cs[i];*/
+/*        eigen_vals[J_MAX - 1][i] = p[J_XI][i] + cs[i];*/
+/*    }*/
+/*    for (int j = 1; j < J_MAX - 1; j++)*/
+/*        for (int i = 0; i < N_ALL; i++)*/
+/*            eigen_vals[j][i] = p[J_XI][i];*/
+/*}*/
