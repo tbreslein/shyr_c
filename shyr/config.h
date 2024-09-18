@@ -47,6 +47,7 @@
 
 typedef enum { InitNoh } InitialConditions;
 typedef enum { BoundaryNoGradients } BoundaryCond;
+typedef enum { RK1, RKF4, SSPRK3, SSPRK5 } RkfMethod;
 
 typedef struct Config {
     double xi_in;
@@ -55,4 +56,5 @@ typedef struct Config {
     InitialConditions init_conditions;
     BoundaryCond boundary_west;
     BoundaryCond boundary_east;
+    RkfMethod rkf_method;
 } Config;

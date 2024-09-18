@@ -8,9 +8,9 @@ Simple HYdrodynamics with Riemann methods, in C
 - [x] add Mesh
 - [x] add State
 - [x] add init.h
-- [ ] add Rhs
-  - [ ] add NumFlux
-  - [ ] add boundary conditions (no gradients and reflecting)
+- [x] add Rhs
+  - [x] add NumFlux
+  - [x] add boundary conditions (no gradients)
 - [ ] add Time
 - [ ] add Output
 - [ ] mainloop
